@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  web:
+    platform: linux/amd64
+    ports:
+      - "8080:80"
+      - "443:443"
+    container_name: centos6-apache2.2
+    build: ./docker/apache
+    restart: always
+    volumes:
+      - ./docker/apache/httpd/conf/httpd.conf:/etc/httpd/conf/httpd.conf
+      - ./docker/apache/httpd/conf.d:/etc/httpd/conf.d
+      - ./docker/apache/httpd/ssl:/etc/httpd/ssl
+      - ./www/html:/var/www/html
