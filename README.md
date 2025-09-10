@@ -16,3 +16,9 @@ docker-compose up --build -d
 ```
 docker-compose down
 ```
+
+## 設定
+/docker/apache/httpd/conf.d/reverseProxy.conf 内のProxyPassを変更する
+
+## 確認用URL
+http://localhost:8080/example
